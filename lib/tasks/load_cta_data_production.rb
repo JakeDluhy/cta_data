@@ -5,7 +5,7 @@ require 'json'
 # Establish Connection to Database
 begin
 	ActiveRecord::Base.establish_connection(
-		adapter: 'postgresql'
+		adapter: 'postgresql',
 	  database: 'd287v520h5c2fb'
 	)
 # Catch argument exception
