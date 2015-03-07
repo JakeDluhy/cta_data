@@ -18,7 +18,7 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/civis_db
+  adapter: postgresql
+  database: d287v520h5c2fb
   pool: 5
   timeout: 5000
