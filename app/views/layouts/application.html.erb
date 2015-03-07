@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CtaData</title>
+  <%= Gon::Base.render_data({}) %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcc0mI6FEkcumru3NWQJGit_2b4wHNiA0" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

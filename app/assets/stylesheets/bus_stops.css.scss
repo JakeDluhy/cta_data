@@ -1,0 +1,43 @@
+html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+
+#info-container {
+	.query-type {
+		width: 100%;
+	}
+	width: 50%;
+	float: left;
+	overflow-y: scroll;
+	height: 100%;
+	.queries-container {
+		position: relative;
+		height: 300px;
+		.query-container {
+			position: absolute;
+			width: 100%;
+			padding: 20px;
+			font-size: 16px;
+			text-align: center;
+			input {margin: 10px 0;}
+			select {text-align: center; width: 30%; margin: 15px auto;}
+			&.single-stop {
+				left: -100%;
+			}
+			&.multi-stops {
+				left: 0;
+			}
+		}
+	}
+	
+}
+#map-canvas {
+	width: 50%;
+	float: right;
+	height: 100%;
+}
+.table {
+	margin-top:  20px;
+}
+
+td, th{
+	text-align: center;
+}

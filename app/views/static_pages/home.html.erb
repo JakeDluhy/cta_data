@@ -1,0 +1,55 @@
+<div id="info-container">
+	<!-- Buttons to toggle between the different querying methods -->
+	<a class="btn btn-primary search-by-cross-street query-type" href="#">Search by Cross Street</a>
+	<a class="btn btn-primary search-by-params query-type" href="#" style="display:none;">Search by Params</a>
+	<!-- Queries container has fixed height and holds the two different query types -->
+	<div class="queries-container">
+		<!-- Multi stop -->
+		<div class="query-container multi-stops">
+			I would like to see the 
+			<select class="results-number form-control">
+				<option value="1">1</option>
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>
+			<select class="results-order form-control">
+				<option value="DESC">Highest</option>
+				<option value="ASC">Lowest</option>
+			</select>
+			number of 
+			<select class="results-filter form-control">
+				<option value="bus_routes_count">Routes</option>
+				<option value="boardings">Boardings</option>
+				<option value="alightings">Alightings</option>
+			</select>
+			
+			<button id="query-button" class="btn btn-primary">Find them!</button>
+		</div>
+		<!-- Search by cross street -->
+		<div class="query-container single-stop">
+			Find stats for the stop on the corner of <br>
+			<input type="text" id="on-street" class="form-control typeahead"><br>
+			and<br>
+			<input type="text" id="cross-street" class="form-control typeahead"><br>
+
+			<button id="cross-streets-button" class="btn btn-primary">Find it!</button>
+		</div>
+	</div>
+	<!-- Table container. Headers bootstraped in, data loaded in through JS -->
+	<div>
+		<table class="table table-striped table-bordered">
+			<tbody class="data-display">
+				<tr>
+					<th>Streets</th>
+					<th>Routes Serviced</th>
+					<th>Boardings</th>
+					<th>Alightings</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div id="map-canvas"></div>
